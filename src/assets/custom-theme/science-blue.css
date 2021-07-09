@@ -1,0 +1,75 @@
+/*自定义蓝色主题-皮肤*/
+
+/*
+ * 1、顶部navbar颜色
+ */
+.science-blue .navbar {
+  background-image: url("../../../static/image/science-blue-header.jpg") !important;
+}
+
+/*
+ * 2、侧边栏
+ */
+.science-blue .sidebar-container {
+  background-image: url("../../../static/image/science-blue-header-origin.jpg") !important;
+}
+
+.science-blue .el-menu {
+  background-color: #2a68c9 !important;
+}
+
+.science-blue .el-menu-item i {
+  color: #fff !important;
+}
+
+.science-blue .el-submenu__title {
+  background-color: #a7038b !important;
+}
+
+.science-blue .sidebar-container .nest-menu .el-submenu > .el-submenu__title,
+.sidebar-container .el-submenu .el-menu-item {
+  background-color: #07aef0 !important;
+}
+
+.science-blue .el-submenu__title:hover {
+  background-image: url("../../../static/image/science-blue-header-origin.jpg") !important;
+}
+.science-blue #app .sidebar-container .el-submenu .el-menu-item:hover {
+  background-color: #5f6364 !important;
+}
+.science-blue #app .sidebar-container .el-submenu .el-menu-item {
+  background-color: #07aef0 !important;
+}
+
+.science-blue .el-menu-item:hover,
+.science-blue .el-menu-item:focus,
+.science-blue .el-submenu__title:hover {
+  background-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.science-blue .el-submenu__title {
+  color: #fff !important;
+}
+
+.science-blue .el-submenu__title i {
+  color: #fff !important;
+}
+
+.science-blue .el-menu-item {
+  color: #fff !important;
+}
+
+.science-blue .el-menu-item.is-active {
+  color: #eeff41 !important;
+}
+
+.science-blue .el-menu-item.is-active i {
+  color: #eeff41 !important;
+}
+
+/**
+ * 3、tabs-view
+ */
+.science-blue .tabs-view-container .tags-view-item.active .el-tag {
+  background-color: #2a68c9;
+}
