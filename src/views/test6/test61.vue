@@ -114,7 +114,7 @@ export default {
         },
       ],
       options: {
-        key: "1",
+        key: "2",
         loading: true, // 是否添加表格loading加载动画
         stripe: false, // 斑马线
         highlightCurrentRow: false, // 是否支持当前行高亮显示
