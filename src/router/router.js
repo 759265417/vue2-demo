@@ -19,6 +19,15 @@ export default [
     },
     children: [
       {
+        path: "test50",
+        name: "test50",
+        component: () => import("@/views/test5/test50"),
+        meta: {
+          title: "test50",
+          icon: "table",
+        },
+      },
+      {
         path: "test51",
         name: "test51",
         component: () => import("@/views/test5/test51"),

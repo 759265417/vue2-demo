@@ -16,7 +16,9 @@
       <el-input id="password" type="password" v-model="passwordValue" />
       <password-meter :password="passwordValue" />
     </el-form>
-
+    <el-select v-model="value1" multiple placeholder="请选择">
+      <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value"> </el-option>
+    </el-select>
     <!-- <div style="position: absolute; top: 40%; left:40%">
       <el-row style="width: 300px;">
         <el-col :span="24">
@@ -47,6 +49,30 @@
     >
       <i class="el-icon-plus"></i>
     </el-upload>
+
+    <ul class="getData">
+      <li
+        v-for="(item, index) in emailMaterial"
+        :key="index"
+        clss="dataItem"
+        @mouseenter="onMousteIn(index)"
+        @mouseleave="onMousteOut()"
+      >
+        <!-- 鼠标移入移出 -->
+        <div class="hoverMask" v-show="seen && index == current">
+          <div class="material-header">
+            <i class="icon icon-more" @click="delBox()"></i>
+            <i class="icon icon-search" @click="previewOff()"></i>
+            <i class="icon icon-edit"></i>
+          </div>
+          <h4>
+            素材名称
+            <span>{{ item.a }}</span>
+          </h4>
+          <span class="email-name">{{ item.b }}</span>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -56,6 +82,12 @@ export default {
   components: { passwordMeter },
   data() {
     return {
+      current: 0, //复制成功提示显示或者隐藏
+      seen: false, //显示和隐藏
+      emailMaterial: [
+        { a: "1123", b: "123" },
+        { a: "222", b: "333" },
+      ],
       uploadDisabled: false,
       password: "",
       isShowTip: false,
@@ -66,9 +98,42 @@ export default {
         { name: "2", title: "222", isBtnSelect: false },
         { name: "3", title: "333", isBtnSelect: false },
       ],
+      options: [
+        {
+          value: "选项1",
+          label:
+            "Select from existing concepts to scrape historical data as well as creating you own concept searches to build up a picture of the accurate data you require.",
+        },
+        {
+          value: "选项2",
+          label: "双皮奶",
+        },
+        {
+          value: "选项3",
+          label: "蚵仔煎",
+        },
+        {
+          value: "选项4",
+          label: "龙须面",
+        },
+        {
+          value: "选项5",
+          label: "北京烤鸭",
+        },
+      ],
+      value1: [],
+      value2: [],
     };
   },
   methods: {
+    onMousteIn: function (index) {
+      this.seen = true; //鼠标移入显示
+      this.current = index;
+    },
+    onMousteOut: function (index) {
+      this.seen = false; //鼠标移出隐藏
+      this.current = null;
+    },
     handleChange(file, fileList) {
       if (fileList.length >= 1) {
         this.uploadDisabled = true;

@@ -11,7 +11,7 @@ export default {
   name: "test23",
   data() {
     return {
-      input: "",
+      input: null,
       data: [
         "test/",
         "test/test1/",
@@ -36,8 +36,15 @@ export default {
   },
   methods: {
     getInputVal(val) {
-      val = val | 0;
-      console.log(val);
+      // val = val | null;
+
+      if (this.input !== null) {
+        this.input = parseInt(this.input);
+      }
+      if (isNaN(this.input)) {
+        this.input = null;
+      }
+      console.log(this.input);
     },
     handleNodeClick(item) {
       console.log(item.key);
