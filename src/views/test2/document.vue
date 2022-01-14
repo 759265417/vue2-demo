@@ -73,7 +73,6 @@ export default {
       // var x = document.getElementById("pdfIframe").contentWindow.document.getElementById("outerContainer");
 
       setTimeout(() => {
-        console.log(item.page, "item.page");
         // this.pdfSrc = `http://localhost:9001/web/viewer.html?file=https://orbit-common-resources.s3.us-west-2.amazonaws.com/agtak8u3kkhmete7d93dme67pgyd6gmv.pdf#page=${
         //   item.page + 1
         // }`;
