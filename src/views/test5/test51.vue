@@ -53,6 +53,34 @@
       @validateFalse="validateFalse"
       @closeDialogFunc="closeDialog"
     />
+    <div style="margin-left: 50px; margin-top: 50px">
+      <el-switch
+        style="display: block; margin-top: 10px"
+        v-model="value1"
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+        active-text="Enable video proctoring"
+      >
+      </el-switch>
+    </div>
+    <div style="margin-left: 70px">
+      <el-switch
+        style="display: block; margin-top: 10px"
+        v-model="value2"
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+        active-text="Enable facial recognition"
+      >
+      </el-switch>
+      <el-switch
+        style="display: block; margin-top: 10px"
+        v-model="value3"
+        active-color="#13ce66"
+        inactive-color="#ff4949"
+        active-text="Enable online invigilation"
+      >
+      </el-switch>
+    </div>
   </div>
 </template>
 
@@ -72,6 +100,9 @@ export default {
   data() {
     const protocal = [{ label: "SSH", value: "ssh" }];
     return {
+      value1: true,
+      value2: true,
+      value3: true,
       arr: [],
       formEditType: "add",
       storage: "",

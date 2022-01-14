@@ -34,6 +34,18 @@ export default [
         component: () => import("@/views/test2/test23"),
         meta: { title: "test23", icon: "table" },
       },
+      {
+        path: "test24",
+        name: "test24",
+        component: () => import("@/views/test2/test24"),
+        meta: { title: "test24", icon: "table" },
+      },
+      {
+        path: "document",
+        name: "document",
+        component: () => import("@/views/test2/document"),
+        meta: { title: "document", icon: "table" },
+      },
     ],
   },
   {
@@ -78,6 +90,7 @@ export default [
         component: () => import("@/views/test4/test43"),
         meta: { title: "test43", icon: "table" },
       },
+    
     ],
   },
   {
